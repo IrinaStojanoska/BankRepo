@@ -85,14 +85,14 @@ public class Mainn {
         double percentage=percentFee(with);
         try {
             if (with > Account.accountBalance) {
-                throw new InsufficientException.InsufficientException("Insufficent Balance in your account");
+                throw new InsufficientExc.InsufficientException("Insufficent Balance in your account");
             } else {
                 Account.accountBalance -= with;
                 stmt[transactionId++]="-"+with;
                 bank.totalTransactionAmount+=percentage;
                 System.out.println("Transaction Successful!!!\n");
             }
-        } catch (InsufficientException.InsufficientException e) {
+        } catch (InsufficientExc.InsufficientException e) {
             System.out.println(e.getMessage());
             System.out.println("Transaction failure!!\n");
         }
