@@ -1,10 +1,14 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Mainn {
+
+    static class InsufficientException extends Exception{
+        InsufficientException(String s)
+        {
+            super(s);
+        }
+    }
     static String[] stmt = new String[100];
   //  static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     static Scanner s = new Scanner(System.in);
@@ -81,14 +85,14 @@ public class Mainn {
         double percentage=percentFee(with);
         try {
             if (with > Account.accountBalance) {
-                throw new Main.InsufficientException("Insufficent Balance in your account");
+                throw new InsufficientException.InsufficientException("Insufficent Balance in your account");
             } else {
                 Account.accountBalance -= with;
                 stmt[transactionId++]="-"+with;
                 bank.totalTransactionAmount+=percentage;
                 System.out.println("Transaction Successful!!!\n");
             }
-        } catch (Main.InsufficientException e) {
+        } catch (InsufficientException.InsufficientException e) {
             System.out.println(e.getMessage());
             System.out.println("Transaction failure!!\n");
         }
