@@ -5,8 +5,8 @@ On the starting of project in terminal we have two choises:
 2. Client
 
 If we choose bank employee we must enter a bank name and then we have a bank menu of four choises
-1.Specify transaction flat fee amount or percent fee amount
-2.Check bank total transaction fee amount
+1. Specify transaction flat fee amount or percent fee amount
+2. Check bank total transaction fee amount
 3. Check bank total transfer amount 
 4. See bank accounts
 First choise will ask us which type of transaction fee we want to specify.
@@ -22,9 +22,9 @@ Then we will see numeric menu with some options:
 3 –> Statement
 4 –> Balance
 
-1.Deposit will give us a chance to put money on out account.
-2.Secount option will give us a chance to take money out from our account
-3.Third option show list of all transactions which are numerated and with sign "+" tell us that some money are put on account and sign "-" tell us that money are teken out from account.
-4.Final choise will show us balance of account and will step back to previous menu because that is final step of process of checking account.
+1. Deposit will give us a chance to put money on out account.
+2. Secount option will give us a chance to take money out from our account
+3. Third option show list of all transactions which are numerated and with sign "+" tell us that some money are put on account and sign "-" tell us that money are teken out from account.
+4. Final choise will show us balance of account and will step back to previous menu because that is final step of process of checking account.
 
 NOTE: Pressing default value on numeric menus will step back to previous menu.
