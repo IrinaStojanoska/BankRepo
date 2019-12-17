@@ -39,6 +39,7 @@ public class Main {
             {
                 System.out.println("Enter any of the below options");
                 System.out.println("1 –> Deposit");
+                System.out.println("1 –> Deposit");
                 System.out.println("2 –> Withdrawl");
                 System.out.println("3 –> Statement");
                 System.out.println("4 –> Balance");
@@ -91,6 +92,7 @@ public class Main {
                 {
                     balance-=with;
                     stmt[id++]="-"+with;
+
                     System.out.println("Transaction Successful!!!\n");
                 }
             }

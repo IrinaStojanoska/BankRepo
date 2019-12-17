@@ -1,64 +1,19 @@
+import java.util.ArrayList;
+
 public class Bank {
    String bankName;
-   Account[] accounts;
+   ArrayList<Account> accounts=new ArrayList<>();
     double totalTransactionAmount;
     double totalTransferAmount;
     double transactionFlatFee;
-    int transactionPercentFee;
+    double transactionPercentFee;
+    double sum = 0.0;
 
-    public Bank(String bankName){
-        this.bankName=bankName;
+    public Bank(){
+
     }
 
-    public String getBankName() {
-        return bankName;
-    }
-
-    public void setBankName(String bankName) {
-        this.bankName = bankName;
-    }
-
-    public Account[] getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(Account[] accounts) {
-        this.accounts = accounts;
-    }
-
-    public double getTotalTransactionAmount() {
-        return totalTransactionAmount;
-    }
-
-    public void setTotalTransactionAmount(double totalTransactionAmount) {
-        this.totalTransactionAmount = totalTransactionAmount;
-    }
-
-    public double getTotalTransferAmount() {
-        return totalTransferAmount;
-    }
-
-    public void setTotalTransferAmount(Float totalTransferAmount) {
-        this.totalTransferAmount = totalTransferAmount;
-    }
-
-    public double getTransactionFlatFee() {
-        return transactionFlatFee;
-    }
-
-    public void setTransactionFlatFee(double transactionFlatFee) {
-        this.transactionFlatFee = transactionFlatFee;
-    }
-
-    public int getTransactionPercentFee() {
-        return transactionPercentFee;
-    }
-
-    public void setTransactionPercentFee(int transactionPercentFee) {
-        this.transactionPercentFee = transactionPercentFee;
-    }
-
-    public Bank(String bankName, Account[] accounts, Float totalTransactionAmount, Float totalTransferAmount, float transactionFlatFee, int transactionPercentFee) {
+    public Bank(String bankName, double transactionFlatFee, double transactionPercentFee) {
         this.bankName = bankName;
         this.accounts = accounts;
         this.totalTransactionAmount = totalTransactionAmount;
@@ -67,5 +22,18 @@ public class Bank {
         this.transactionPercentFee = transactionPercentFee;
     }
 
+
+     public void totalTransferAmount(){
+        for(int i=0;i<accounts.size();i++){
+            sum+=accounts.get(i).getAccountBalance();
+        }
+         System.out.println("Total transfer amount is "+sum);
+     }
+
+     public void printAccounts(){
+        for(int i=0;i<accounts.size();i++){
+            System.out.println(accounts.get(i));
+        }
+     }
 
 }
